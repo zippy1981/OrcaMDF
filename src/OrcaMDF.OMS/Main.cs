@@ -157,8 +157,9 @@ namespace OrcaMDF.OMS
 		private void addBaseTablesNode(TreeNode rootNode)
 		{
 			var baseTableNode = rootNode.Nodes.Add("Base Tables");
-			baseTableNode.Nodes.Add("sys.sysallocunits").ContextMenu = baseTableMenu;
-			baseTableNode.Nodes.Add("sys.syscolpars").ContextMenu = baseTableMenu;
+            baseTableNode.Nodes.Add("sys.sysallocunits").ContextMenu = baseTableMenu;
+            baseTableNode.Nodes.Add("sys.syscolpars").ContextMenu = baseTableMenu;
+            baseTableNode.Nodes.Add("sys.sysdbreg").ContextMenu = baseTableMenu;
 			baseTableNode.Nodes.Add("sys.sysidxstats").ContextMenu = baseTableMenu;
 			baseTableNode.Nodes.Add("sys.sysiscols").ContextMenu = baseTableMenu;
 			baseTableNode.Nodes.Add("sys.sysobjvalues").ContextMenu = baseTableMenu;
@@ -362,9 +363,11 @@ namespace OrcaMDF.OMS
 			switch(table)
 			{
 				case "sys.sysallocunits":
-					return db.BaseTables.sysallocunits;
-				case "sys.syscolpars":
-					return db.BaseTables.syscolpars;
+                    return db.BaseTables.sysallocunits;
+                case "sys.syscolpars":
+                    return db.BaseTables.syscolpars;
+                case "sys.sysdbreg":
+                    return db.BaseTables.sysdbreg;
 				case "sys.sysidxstats":
 					return db.BaseTables.sysidxstats;
 				case "sys.sysiscols":

@@ -18,7 +18,13 @@ namespace OrcaMDF.Core.MetaData
 		internal IList<sysscalartype> sysscalartypes { get; private set; }
 		internal IList<sysrowset> sysrowsets { get; private set; }
 		internal IList<sysrscol> sysrscols { get; private set; }
-		internal IList<syssingleobjref> syssingleobjrefs { get; private set; }
+        internal IList<syssingleobjref> syssingleobjrefs { get; private set; }
+
+        private IList<sysdbreg> _sysdbreg;
+        internal IList<sysdbreg> sysdbreg
+        {
+            get { return _sysdbreg ?? (_sysdbreg = scanner.ScanTable<sysdbreg>("sysdbreg").ToList()); }
+        }  
 		
 		private IList<sysidxstat> _sysidxstats;
 		internal IList<sysidxstat> sysidxstats

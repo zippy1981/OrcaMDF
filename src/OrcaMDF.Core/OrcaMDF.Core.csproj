@@ -107,6 +107,7 @@
     <Compile Include="Engine\SqlTypes\SqlUniquifier.cs" />
     <Compile Include="Engine\SqlTypes\SqlVarBinary.cs" />
     <Compile Include="MetaData\BaseTableData.cs" />
+    <Compile Include="MetaData\BaseTables\sysdbreg.cs" />
     <Compile Include="MetaData\BaseTables\sysowner.cs" />
     <Compile Include="MetaData\BaseTables\sysobjvalue.cs" />
     <Compile Include="MetaData\BaseTables\sysiscol.cs" />
